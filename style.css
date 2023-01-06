@@ -323,7 +323,7 @@
 .product-utility-teaser .products-utilities .product-items .prod-buy-btn{
     background-color: gold;
     padding: 8px 28px;
-    font-size: 27px;
+    font-size: 20px;
     color: #000;
     text-decoration: none;
     width: 100%;
@@ -337,6 +337,12 @@
         overflow: hidden;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+    .products-utilities .product-items .product-name{
+        font-size: 18px;
+    }
+
+    
     .products-utilities .product-items{
         margin-right: 0;
         overflow: hidden;
