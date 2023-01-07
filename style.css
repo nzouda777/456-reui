@@ -291,14 +291,12 @@
         left: 30%;
         /* left: auto; */
     }
-    .ceo-img img{
-        /* min-width: 100%; */
-    }
 }
 .product-utility-teaser{
     display: flex;
     flex-direction: column;
     margin-top: 32px;
+    margin-bottom: 32px;
     align-items: center;
     justify-content: center;
 }
@@ -334,7 +332,7 @@
 @media only screen and (max-width: 570px){
     .products-utilities{
         display: grid;
-        overflow: hidden;
+        /* overflow: hidden; */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
@@ -345,10 +343,70 @@
     
     .products-utilities .product-items{
         margin-right: 0;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .products-utilities .product-items .product-ut-img img{
         width: 100%;
     }
+}
+
+.tr-steps-teaser .tr-step-title{
+ text-align: center;
+ font-size: 64px;
+ text-transform: uppercase;
+}
+.tr-steps-teaser .steps{
+    display: flex;
+    width: 1410px;
+}
+.tr-steps-teaser .steps-wrapper::-webkit-scrollbar{
+    width: 10px;
+    padding-top: 16px;
+    height: 5px;
+}
+.tr-steps-teaser .steps-wrapper{
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.tr-steps-teaser .steps-wrapper::-webkit-scrollbar-track{
+    background: rgba(248, 245, 245, 0.342);
+}
+.tr-steps-teaser .steps-wrapper::-webkit-scrollbar-thumb{
+    background: rgb(19, 18, 18);
+}
+.tr-steps-teaser .steps .step{
+    margin-right: 50px;
+    margin-left: 5px;
+    background: rgb(211, 55, 211);
+    font-size: 18px;
+    padding: 10px;
+    max-width: 460px;
+}
+@media only screen and (max-width: 760px){
+    .tr-steps-teaser .tr-step-title{
+        text-align: center;
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+    .tr-steps-teaser .steps .step{
+        margin-left: 5px;
+        margin-right: 20px;
+        width: 260px;
+    }
+}
+.quizz-teaser{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quizz-teaser .quizz-btn{
+    background: gold;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 8px 22px;
 }
