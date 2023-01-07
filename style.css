@@ -358,7 +358,7 @@
 }
 .tr-steps-teaser .steps{
     display: flex;
-    width: 1410px;
+    min-width: 1400px;
 }
 .tr-steps-teaser .steps-wrapper::-webkit-scrollbar{
     width: 10px;
@@ -393,6 +393,10 @@
         margin-left: 5px;
         margin-right: 20px;
         width: 260px;
+    }
+    .tr-steps-teaser .steps{
+        display: flex;
+        min-width: 900px;
     }
 }
 .quizz-teaser{
