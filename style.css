@@ -4,18 +4,6 @@
         width: 50%;
     }
 }
-/* @media only screen and (min-width: 917px){
-    .bs-dev-lg-col-half{
-        flex: 0 0 auto;
-        width: 50%;
-    }
-    .header_img .img-head-text{
-        position: relative;
-        color: rgb(175, 26, 26);
-        font-size: 40px;
-        text-transform: uppercase;
-    }
-} */
 .bs-dev-lg-col-half{
     margin: 0 auto;
     display: flex;
@@ -149,6 +137,12 @@
 
 .img-text-wrapper .list-element .element{
     font-size: 18px;
+    position: relative;
+}
+.utility-title{
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
 }
 .img-text-wrapper .list-element .element::before{
     content: "";
@@ -157,7 +151,7 @@
     width: 15px;
     background-color: #000;
     display: block;
-    left: 2%;
+    left: -4%;
     top: 40%;
 }
 
