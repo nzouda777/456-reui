@@ -60,23 +60,183 @@
     font-size: 24px;
     text-align: center;
 }
+/* skin color teaser */
+.bs-color-picker{
+    margin-top: 25px;
+}
+.bs-dev-colors-picker-teaser{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.bs-color-picker-wrapper{
+    margin-top: 64px;
+    /* width: 30%; */
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit ,minmax(80px, 1fr)); */
+    display: flex; 
+    /* max-width: 1640px; */
+    /* height: 250%; */
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 50px;
+    
+}
+
+.bs-color-picker-wrapper::-webkit-scrollbar{
+    width: 10px;
+    padding-top: 16px;
+    height: 0px;
+}
+
+.bs-color-picker-wrapper::-webkit-scrollbar-track{
+    background: rgba(184, 180, 180, 0.342);
+}
+.bs-color-picker-wrapper::-webkit-scrollbar-thumb{
+    background: rgb(31, 23, 23);
+}
+.bs-single-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    /* margin: 0 -5px; */
+}
+
+.bs-single-color .bs-colors{
+    display: flex;
+    justify-content: space-between;
+}
+.bs-single-color .bs-colors .color-picker{
+    background-color: brown;
+    height: 130px;
+    width: 130px;
+    margin-right: 45px;
+    border-radius: 100%;
+}
+@media only screen and (max-width: 750px){
+    .bs-single-color .bs-colors .color-picker{
+        background-color: rgb(224, 146, 146);
+        height: 36px !important;
+        width: 36px !important;
+        padding: 0 !important;
+        margin-right: 10px !important;
+        border-radius: 100%;
+    }   
+    .bs-color-picker-wrapper{
+        padding: 0 !important; 
+        width: 100% !important;
+    }
+    .bs-single-color{
+        margin: 0 !important;
+        text-align: center !important;
+    }
+    .bs-single-color .bs-colors .color-picker:first-child::before{
+        display: none;
+    }
+    
+    .bs-single-color .bs-colors .color-picker:first-child::after{
+       display: none;
+    }
+    .bs-single-color .bs-colors .color-picker:last-child::before{
+        display: none;
+    }
+    
+    .bs-single-color .bs-colors .color-picker:last-child::after{
+        display: none;
+    }
+    .bs-single-color  .bs-color-name .color-name{
+        position: relative !important;
+        margin-left: -20px;
+        font-size: 11px;
+        
+    }
+}
+.bs-single-color .bs-colors .color-picker:first-child::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    left: 12%;
+    width: 2px;
+    background: #000000;
+    top: 95%;
+}
+
+.bs-single-color .bs-colors .color-picker:first-child::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    left: 12%;
+    background: #000000;
+    bottom: -15%;
+}
+.bs-single-color .bs-colors .color-picker:last-child::before{
+    content: '';
+    position: absolute;
+    right: 27%;
+    height: 25px;
+    width: 2px;
+    background: #000000;
+    top: 98%;
+}
+
+.bs-single-color .bs-colors .color-picker:last-child::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    right: 27%;
+    background: #000000;
+    bottom: -16.5%;
+}
+.bs-single-color .bs-colors .orphan:first-child::before{
+    display: none;
+}
+
+.bs-single-color .bs-colors .orphan:first-child::after{
+    display: none;
+}
+.bs-single-color .bs-color-name .orph-name{
+    position: absolute;
+    left: 0 !important;
+    bottom: -23% !important;
+    /* color: #FAC869; */
+}
+.bs-single-color  .bs-color-name .color-name{
+    position: absolute;
+    left: 15%;
+    right: 30%;
+    bottom: -19%;
+}
 .bs-find-prototype{
     position: relative;
     display: flex;
     margin-top: 5%;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
+.prot-icon{
+    display: inherit;
+    font-size: 54px;
+    /* bottom: 0%; */
+}
+.prototype{
+    margin: 64px 0;
+    width: 900px;
+}
 .bs-find-prototype .prototype-grid .prototype .img-handler{
-    width: 552px;
-    position: relative;
-    background: url("./456skin/456\ IMAGE\ 1\ \ hero\ desktop\ banner\ image13.png");
-    background-position: top bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    height: 600px;
+    width: 100%;
+}
+.bs-find-prototype .prototype-grid .prototype .img-handler img{
+    width: 100%;
+    height: 100%;
 }
 .bs-find-prototype .prototype-grid .prototype .img-handler  .img-legend{
     position: absolute;
@@ -84,7 +244,10 @@
     font-weight: 800;
     text-transform: uppercase;
     margin-left: 20px;
-    bottom: 50px;
+    bottom: 100px;
+}
+.prot-teaser{
+    display: flex;
 }
 .bs-find-prototype .prototype-grid .prototype .img-handler  .img-legend .prot-text{
     color: #fff;
@@ -96,6 +259,10 @@
 .bs-find-prototype .prototype-grid .prototype .img-handler  .img-legend .prot-link{
     text-decoration: none;
     color: #000000;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .bs-find-prototype .prototype-grid .prototype .img-handler  .img-legend .prot-link .link-text{
     /* height: 62px; */
@@ -118,9 +285,10 @@
     /* height: 500px; */
 }
 .text-handler{
-    width: 50%;
+    width: 100%;
+    height: 600px;
     padding: 2rem;
-    background: teal;
+    background: #D6BFDD;
 }
 .text-handler .prototype-title{
     font-size: 32px;
@@ -131,8 +299,73 @@
     font-size: 24px;
     line-height: 120.5%;
 }
+/* big product teaser */
+.bs-big-product-teaser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bs-big-product-teaser .product-wide-img{
+    position: relative;
+}
 
+.bs-big-product-teaser .product-wide-img img{
+    position: relative;
+    max-width: 100%;
+}
+.bs-big-product-teaser .product-wide-img .product-header{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    z-index: 1;
+    right: 20%;
+    margin: 0 auto;
+}
 
+.bs-big-product-teaser .product-wide-img .product-header .product-teaser-step-desc{
+    font-style: italic;
+}
+
+.bs-big-product-teaser .product-wide-img .product-bottom{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    right: 30%;
+    /* width: 100%; */
+    
+}
+@media only screen and (max-width:769px){
+    .product-header{
+        position: relative !important;
+        left: 0 !important;
+        text-align: center;
+    }
+    .product-header .sub-hero-title{
+        font-size: 26px !important;
+    }
+    .product-header .product-teaser-step-desc{
+        font-size: 22px;
+    }
+
+.bs-big-product-teaser .product-wide-img .product-bottom{
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    right: 30%;
+    /* width: 100%; */
+    
+}
+}
+
+.bs-big-product-teaser .product-wide-img .product-bottom .prod-btn{
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    background: #FFD458;
+}
 /* skin care */
 .bs-skin-care-product{
     /* display: flex;
@@ -146,7 +379,7 @@
     display: grid;
     
     grid-template-columns: repeat(2, minmax(300px, 1fr));
-    overflow: hidden;
+    /* overflow: hidden; */
     /* flex-direction: column; */
     margin-top: 32px;
     margin-bottom: 32px;
@@ -246,17 +479,44 @@
         overflow: hidden;
     }
 
+    .bs-text-sub-hero-teaser .text-teaser-content .text-teaser{
+        position: relative;
+        /* width: 100%; */
+        font-size: 22px !important;
+        /* color: rebeccapurple; */
+        margin: 10px 8px !important;
+    }
+    .toggle-txt-img{
+        display: flex;
+        justify-content: center;
+    }
+    .toggle-txt-img .active{
+        background: #FFD458;
+    }
+    .toggle-txt-img .bullet, .bullet1{
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        border: 1px solid #000000;
+        display: block;
+    }
 .product-row .products-utilities .product-items .product-name{
     font-size: 16px;
     text-align: center;
 }
+.prot-teaser{
+    display: flex;
+}
+.prototype{
+    width: 100%;
+    flex-direction: column;
+}
     .prototype .text-handler{
+        width: 100%;
         display: none;
+        overflow-x: hidden;
     }
-    .prototype .img-handler{
-        height: 400px !important;
-        width: 350px !important;
-    }
+
     .prototype .img-handler .img-legend .prot-text{
         font-size: 28px !important;
     }
